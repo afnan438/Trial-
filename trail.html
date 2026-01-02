@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Big Website Demo</title>
+
+<style>
+/* ---------------- RESET ---------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: #f4f6f8;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ---------------- NAVBAR ---------------- */
+header {
+  background: #0a1f44;
+  color: #fff;
+  padding: 15px 50px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav h1 {
+  font-size: 26px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin-left: 25px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  color: #00d4ff;
+}
+
+/* ---------------- HERO ---------------- */
+.hero {
+  height: 90vh;
+  background: linear-gradient(to right, #0a1f44, #122f6e);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 50px;
+}
+
+.hero p {
+  font-size: 20px;
+  margin: 20px 0;
+}
+
+.hero a {
+  display: inline-block;
+  background: #00d4ff;
+  color: #000;
+  padding: 12px 25px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+/* ---------------- SECTIONS ---------------- */
+section {
+  padding: 70px 60px;
+}
+
+section h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 36px;
+  color: #0a1f44;
+}
+
+/* ---------------- ABOUT ---------------- */
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.about img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.about div {
+  font-size: 18px;
+}
+
+/* ---------------- SERVICES ---------------- */
+.services {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.service-card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.service-card h3 {
+  margin-bottom: 15px;
+}
+
+/* ---------------- PORTFOLIO ---------------- */
+.portfolio {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.project {
+  background: #ddd;
+  height: 200px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* ---------------- TESTIMONIALS ---------------- */
+.testimonials {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.testimonial {
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* ---------------- PRICING ---------------- */
+.pricing {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.price-card {
+  background: #0a1f44;
+  color: #fff;
+  padding: 35px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.price-card h3 {
+  font-size: 28px;
+}
+
+.price-card p {
+  font-size: 40px;
+  margin: 15px 0;
+}
+
+.price-card ul {
+  list-style: none;
+}
+
+.price-card ul li {
+  margin: 10px 0;
+}
+
+/* ---------------- CONTACT ---------------- */
+.contact form {
+  max-width: 600px;
+  margin: auto;
+  background: #fff;
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.contact input,
+.contact textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+}
+
+.contact button {
+  background: #0a1f44;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  width: 100%;
+  font-size: 18px;
+}
+
+/* ---------------- FOOTER ---------------- */
+footer {
+  background: #0a1f44;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+@media(max-width: 900px) {
+  .about, .services, .portfolio, .testimonials, .pricing {
+    grid-template-columns: 1fr;
+  }
+
+  nav ul {
+    display: none;
+  }
+
+  .hero h2 {
+    font-size: 36px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <nav>
+    <h1>BigSite</h1>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="hero">
+  <div>
+    <h2>Build Big. Think Bigger.</h2>
+    <p>A large professional website using only HTML & CSS</p>
+    <a href="#">Get Started</a>
+  </div>
+</div>
+
+<section>
+  <h2>About Us</h2>
+  <div class="about">
+    <img src="https://picsum.photos/500/350" alt="">
+    <div>
+      <p>
+        We build clean, modern and scalable websites using simple
+        technologies. This demo proves that even without JavaScript,
+        you can create a powerful and professional layout.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Our Services</h2>
+  <div class="services">
+    <div class="service-card"><h3>Web Design</h3><p>Modern UI/UX layouts</p></div>
+    <div class="service-card"><h3>Development</h3><p>Fast & clean code</p></div>
+    <div class="service-card"><h3>SEO</h3><p>Search engine optimized</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>Portfolio</h2>
+  <div class="portfolio">
+    <div class="project">Project 1</div>
+    <div class="project">Project 2</div>
+    <div class="project">Project 3</div>
+  </div>
+</section>
+
+<section>
+  <h2>Testimonials</h2>
+  <div class="testimonials">
+    <div class="testimonial">"Amazing website!"</div>
+    <div class="testimonial">"Clean and professional."</div>
+    <div class="testimonial">"Loved the design."</div>
+  </div>
+</section>
+
+<section>
+  <h2>Pricing</h2>
+  <div class="pricing">
+    <div class="price-card">
+      <h3>Basic</h3>
+      <p>$19</p>
+      <ul><li>1 Page</li><li>Email Support</li></ul>
+    </div>
+    <div class="price-card">
+      <h3>Pro</h3>
+      <p>$49</p>
+      <ul><li>5 Pages</li><li>Priority Support</li></ul>
+    </div>
+    <div class="price-card">
+      <h3>Enterprise</h3>
+      <p>$99</p>
+      <ul><li>Unlimited Pages</li><li>24/7 Support</li></ul>
+    </div>
+  </div>
+</section>
+
+<section class="contact">
+  <h2>Contact Us</h2>
+  <form>
+    <input type="text" placeholder="Your Name">
+    <input type="email" placeholder="Your Email">
+    <textarea rows="5" placeholder="Your Message"></textarea>
+    <button>Send Message</button>
+  </form>
+</section>
+
+<footer>
+  <p>© 2026 BigSite. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
